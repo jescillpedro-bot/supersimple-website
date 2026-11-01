@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jescill Pedro | IT Professional Portfolio</title>
+
+<meta name="description" content="Jescill Pedro is an aspiring IT professional and BS Information Technology student at City College of Calamba. Explore her web development, programming, and digital design projects.">
+<meta name="keywords" content="Jescill Pedro, IT Portfolio, Web Development, HTML, CSS, JavaScript, C++, Digital Design, Calamba City">
+<meta name="author" content="Jescill Pedro">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://pedro-portfolio3-it11.netlify.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jescill Pedro | IT Professional Portfolio">
+<meta property="og:description" content="Explore my skills, education, experience, and digital projects.">
+<meta property="og:url" content="https://pedro-portfolio3-it11.netlify.app/">
+<meta property="og:image" content="https://i.postimg.cc/7hfPbwyX/IMG-20260521-193935-554.jpg">
+
+<style>
+
+/* ========== GENERAL ========== */
+
+:root {
+    --primary: #176b87;
+    --accent: #e76f51;
+    --background: #f4f8fb;
+    --surface: #ffffff;
+    --text: #263238;
+    --muted: #54636b;
+    --border: #dce5eb;
+    --soft: #eaf4f4;
+}
+
+body.dark {
+    --primary: #69c6e8;
+    --accent: #ff9b7c;
+    --background: #101b27;
+    --surface: #1c2a38;
+    --text: #f0f5f8;
+    --muted: #b7c6d1;
+    --border: #34485a;
+    --soft: #263d4c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background .3s, color .3s;
+}
+
+a {
+    color: var(--primary);
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.section {
+    padding: 80px 0;
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 15px;
+}
+
+.section-description {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--background);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 11px 21px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: .9;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--primary);
+}
+
+.btn.small {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+/* ========== NAVIGATION ========== */
+
+header {
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-toggle, .menu-toggle {
+    padding: 8px 12px;
+    background: var(--soft);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ========== HOME ========== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 75px 0;
+    background: linear-gradient(135deg, var(--soft), var(--background));
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.profile-pic {
+    width: min(330px, 85%);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--primary);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+/* ========== CARDS ========== */
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 28px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.04);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 35px;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.info-list strong {
+    color: var(--primary);
+}
+
+/* ========== SKILLS ========== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    background: var(--soft);
+    color: var(--primary);
+    padding: 8px 13px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ========== EXPERIENCE ========== */
+
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    border-left: 3px solid var(--primary);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--accent);
+    border-radius: 50%;
+    left: -39px;
+    top: 30px;
+}
+
+.timeline-item h3 {
+    color: var(--primary);
+}
+
+.timeline-item .date {
+    color: var(--accent);
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* ========== PROJECTS ========== */
+
+.project-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.project-controls input,
+.project-controls select {
+    padding: 13px;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.project-controls input {
+    flex: 2;
+    min-width: 220px;
+}
+
+.project-controls select {
+    flex: 1;
+    min-width: 170px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: var(--soft);
+}
+
+.project-body {
+    padding: 23px;
+}
+
+.project-body h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.project-body p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.project-tag {
+    display: inline-block;
+    background: var(--soft);
+    color: var(--primary);
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 3px;
+    font-size: 12px;
+}
+
+.project-buttons {
+    margin-top: 20px;
+}
+
+#noResults {
+    text-align: center;
+    padding: 30px;
+    color: var(--muted);
+}
+
+#projectDetail {
+    display: none;
+}
+
+.detail-image {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: contain;
+    background: var(--soft);
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.detail-grid h3 {
+    color: var(--primary);
+    margin: 20px 0 10px;
+}
+
+.detail-grid ul {
+    padding-left: 22px;
+}
+
+/* ========== EDUCATION ========== */
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.education-card {
+    background: var(--surface);
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.education-card h3 {
+    color: var(--primary);
+}
+
+/* ========== CV ========== */
+
+.cv-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 45px;
+    text-align: center;
+}
+
+.cv-box p {
+    color: var(--muted);
+    margin: 15px 0;
+}
+
+/* ========== CONTACT ========== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+    overflow-wrap: anywhere;
+}
+
+.contact-form label {
+    display: block;
+    margin: 15px 0 6px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+    background: #102b3a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer a {
+    color: #b4e5f5;
+    margin: 0 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 1000px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        padding: 25px;
+        flex-direction: column;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .skills-grid,
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-content,
+    .about-grid,
+    .contact-grid,
+    .detail-grid,
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        grid-row: 1;
+    }
+
+    .skills-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .cv-box {
+        padding: 25px;
+    }
+
+    .profile-pic {
+        width: 220px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+
+<header>
+<nav class="navbar" aria-label="Main navigation">
+
+<a href="#home" class="logo">JP<span>.</span></a>
+
+<div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle"
+        aria-label="Toggle dark mode">🌙</button>
+
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">☰</button>
+</div>
+
+</nav>
+</header>
+
+<main>
+
+<!-- ========== HOME ========== -->
+
+<section id="home" class="hero">
+<div class="container hero-content">
+
+<div>
+    <p class="eyebrow">HELLO, I'M</p>
+
+    <h1>Jescill <span>Pedro</span></h1>
+
+    <h2>Aspiring IT Professional | BSIT Student</h2>
+
+    <p>
+        I am an aspiring IT professional and Bachelor of Science
+        in Information Technology student at City College of Calamba.
+        I am passionate about web development, programming,
+        computer troubleshooting, and digital design.
+        I enjoy learning new technologies and creating meaningful
+        digital solutions.
+    </p>
+
+    <div>
+        <a href="#projects" class="btn">View My Projects</a>
+
+        <!-- DOWNLOAD CV -->
+        <a href="./Jescill_Pedro_CV.pdf"
+           class="btn secondary"
+           download="Jescill_Pedro_CV.pdf">
+           📄 Download CV
+        </a>
+
+        <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+</div>
+
+<div class="hero-image">
+    <img
+        src="https://i.postimg.cc/7hfPbwyX/IMG-20260521-193935-554.jpg"
+        alt="Profile photo of Jescill Pedro"
+        class="profile-pic">
+</div>
+
+</div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+
+<section id="about" class="section">
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<p class="section-description">
+Get to know more about my background, interests,
+and professional goals.
+</p>
+
+<div class="about-grid">
+
+<div class="card">
+    <h3>Who Am I?</h3>
+
+    <p>
+        My name is Jescill Olieta Pedro, an aspiring IT professional
+        from Calamba City, Laguna, Philippines.
+    </p>
+
+    <p>
+        I am currently pursuing a Bachelor of Science in
+        Information Technology at City College of Calamba,
+        with an academic period of 2025–2028.
+    </p>
+
+    <p>
+        I have academic experience in front-end web development,
+        C++ programming, computer troubleshooting,
+        and creative digital logo design.
+    </p>
+
+    <p>
+        Through academic activities and personal projects,
+        I have developed foundational knowledge of programming,
+        website design, system development, and IT support.
+    </p>
+
+    <h3>Career Objective</h3>
+
+    <p>
+        As an aspiring IT professional, I aim to gain practical
+        experience in web development, technical support,
+        networking, and software development.
+    </p>
+
+    <p>
+        I am eager to learn new technologies, improve my
+        technical skills, and contribute to future IT projects.
+    </p>
+</div>
+
+<div class="card">
+    <h3>Basic Information</h3>
+
+    <ul class="info-list">
+        <li><strong>Full Name:</strong> Jescill Olieta Pedro</li>
+        <li><strong>Professional Title:</strong> Aspiring IT Professional</li>
+        <li><strong>Location:</strong> Calamba City, Laguna, Philippines</li>
+        <li><strong>Email:</strong>
+            <a href="mailto:jescillpedro@gmail.com">
+                jescillpedro@gmail.com
+            </a>
+        </li>
+        <li><strong>Phone:</strong>
+            <a href="tel:+639168961285">0916 896 1285</a>
+        </li>
+        <li><strong>Program:</strong> BS Information Technology</li>
+        <li><strong>College:</strong> City College of Calamba</li>
+        <li><strong>Academic Years:</strong> 2025–2028</li>
+        <li><strong>Experience:</strong> Academic IT projects,
+            practical training, and previous employment</li>
+        <li><strong>Specializations:</strong> Web Development,
+            Programming, IT Support, Digital Design</li>
+    </ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========== SKILLS ========== -->
+
+<section id="skills" class="section">
+<div class="container">
+
+<h2 class="section-title">My Skills</h2>
+
+<p class="section-description">
+Technical knowledge and professional skills developed
+through academic activities and personal projects.
+</p>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+    <h3>💻 Web Development</h3>
+    <div class="skill-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Web Layout Design</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>⚙️ Programming</h3>
+    <div class="skill-tags">
+        <span>C++</span>
+        <span>Programming Logic</span>
+        <span>Debugging</span>
+        <span>System Development</span>
+        <span>Data Structures</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>🖥️ IT Support</h3>
+    <div class="skill-tags">
+        <span>Computer Hardware</span>
+        <span>Software Installation</span>
+        <span>Basic Troubleshooting</span>
+        <span>Computer Maintenance</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>🎨 Digital Design</h3>
+    <div class="skill-tags">
+        <span>Logo Design</span>
+        <span>Creative Design</span>
+        <span>Color Selection</span>
+        <span>Visual Branding</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>🤝 Professional Skills</h3>
+    <div class="skill-tags">
+        <span>Communication</span>
+        <span>Teamwork</span>
+        <span>Problem Solving</span>
+        <span>Flexibility</span>
+        <span>Willingness to Learn</span>
+    </div>
+</div>
+
+<div class="skill-card">
+    <h3>📚 Learning Interests</h3>
+    <div class="skill-tags">
+        <span>Computer Networking</span>
+        <span>Database Management</span>
+        <span>Cloud Technologies</span>
+        <span>System Administration</span>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========== EXPERIENCE ========== -->
+
+<section id="experience" class="section">
+<div class="container">
+
+<h2 class="section-title">Work & Project Experience</h2>
+
+<p class="section-description">
+My employment background, academic experience,
+and practical IT-related activities.
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+    <h3>Backroom Personnel</h3>
+    <p><strong>Organization:</strong> SPX SOC-5 Shopee</p>
+    <p class="date">July 11, 2024 – February 11, 2025</p>
+    <p>
+        Gained practical workplace experience and developed
+        responsibility, teamwork, flexibility, and communication skills.
+    </p>
+</div>
+
+<div class="timeline-item">
+    <h3>Front-End Web Developer</h3>
+    <p><strong>Project:</strong> Personal Portfolio Website</p>
+    <p class="date">Academic / Personal Project</p>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+    <p>
+        Designed and developed a responsive personal portfolio
+        website to showcase my skills, educational background,
+        and digital projects.
+    </p>
+    <p>
+        Practiced creating website layouts, styling web pages,
+        and improving the user experience.
+    </p>
+</div>
+
+<div class="timeline-item">
+    <h3>IT Support Trainee</h3>
+    <p><strong>Type:</strong> Academic Practice</p>
+    <p class="date">IT-Related Learning Activities</p>
+    <p>
+        Practiced basic computer troubleshooting, software
+        installation, and identifying common hardware and
+        software problems.
+    </p>
+    <p>
+        Developed problem-solving skills and learned the
+        importance of maintaining computer systems.
+    </p>
+</div>
+
+<div class="timeline-item">
+    <h3>Student Programmer</h3>
+    <p><strong>Project:</strong> Request Management System</p>
+    <p class="date">Academic Programming Project</p>
+    <p><strong>Technology:</strong> C++</p>
+    <p>
+        Developed an academic request management system using C++.
+        Applied programming logic and data structures to organize
+        requests and manage information.
+    </p>
+    <p>
+        Improved my understanding of program development,
+        debugging, and system organization.
+    </p>
+</div>
+
+<div class="timeline-item">
+    <h3>Digital Designer</h3>
+    <p><strong>Project:</strong> Flower's Digital</p>
+    <p class="date">Personal Creative Project</p>
+    <p>
+        Created a personal digital logo using creative design
+        concepts, colors, and symbols to represent my identity.
+        Improved my creativity, attention to detail,
+        and ability to present a visual concept clearly.
+    </p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========== PROJECTS ========== -->
+
+<section id="projects" class="section">
+<div class="container">
+
+<h2 class="section-title">My Digital Projects</h2>
+
+<p class="section-description">
+Explore my web development, programming,
+and digital design projects.
+</p>
+
+<div class="project-controls">
+
+    <input type="search"
+           id="projectSearch"
+           placeholder="Search projects, technology, category, year..."
+           aria-label="Search projects">
+
+    <select id="categoryFilter" aria-label="Filter project category">
+        <option value="all">All Categories</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Information System">Information System</option>
+        <option value="Graphic Design">Graphic Design</option>
+    </select>
+
+    <select id="yearFilter" aria-label="Filter project year">
+        <option value="all">All Years</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="unspecified">Year Not Specified</option>
+    </select>
+
+</div>
+
+<p id="projectCount" aria-live="polite"></p>
+
+<div class="project-grid" id="projectGrid"></div>
+
+<p id="noResults" hidden>No projects match your search.</p>
+
+</div>
+</section>
+
+<!-- ========== PROJECT DETAILS ========== -->
+
+<section id="projectDetail" class="section">
+<div class="container">
+
+<a href="#projects" class="btn secondary">
+    ← Back to Projects
+</a>
+
+<div id="detailContent"></div>
+
+</div>
+</section>
+
+<!-- ========== EDUCATION ========== -->
+
+<section id="education" class="section">
+<div class="container">
+
+<h2 class="section-title">Education & Credentials</h2>
+
+<p class="section-description">
+My academic background and educational journey.
+</p>
+
+<div class="education-grid">
+
+<div class="education-card">
+    <h3>Bachelor of Science in Information Technology</h3>
+    <p><strong>School:</strong> City College of Calamba</p>
+    <p><strong>Location:</strong> Calamba City, Laguna</p>
+    <p><strong>Years:</strong> 2025–2028</p>
+    <p><strong>Status:</strong> Currently Studying</p>
+</div>
+
+<div class="education-card">
+    <h3>Senior High School</h3>
+    <p><strong>School:</strong> Rizal College of Laguna</p>
+    <p><strong>Location:</strong> Parian, Calamba City, Laguna</p>
+</div>
+
+<div class="education-card">
+    <h3>Junior High School</h3>
+    <p><strong>School:</strong> Palo Alto Integrated School</p>
+    <p><strong>Location:</strong> Calamba City, Laguna</p>
+</div>
+
+<div class="education-card">
+    <h3>Elementary Education</h3>
+    <p><strong>School:</strong> Palo Alto Elementary School</p>
+    <p><strong>Location:</strong> Calamba City, Laguna</p>
+</div>
+
+</div>
+
+<div class="card" style="margin-top:30px">
+    <h3>Certifications & Credentials</h3>
+    <p>
+        Professional certifications will be added when obtained.
+        I am currently focused on developing my technical knowledge
+        and practical experience through my Information Technology studies.
+    </p>
+</div>
+
+</div>
+</section>
+
+<!-- ========== CV ========== -->
+
+<section id="cv" class="section">
+<div class="container">
+
+<h2 class="section-title">My Curriculum Vitae</h2>
+
+<p class="section-description">
+Learn more about my education, technical skills,
+work experience, and professional qualifications.
+</p>
+
+<div class="cv-box">
+
+<h3>Jescill Olieta Pedro</h3>
+
+<p>
+    Aspiring IT Professional |
+    Bachelor of Science in Information Technology
+</p>
+
+<p>
+    City College of Calamba |
+    Calamba City, Laguna, Philippines
+</p>
+
+<div>
+
+    <!-- DOWNLOAD CV: PDF IS IN THE SAME FOLDER -->
+    <a href="./Jescill_Pedro_CV.pdf"
+       class="btn"
+       download="Jescill_Pedro_CV.pdf">
+       📄 Download My CV
+    </a>
+
+    <!-- VIEW CV ONLINE -->
+    <a href="./Jescill_Pedro_CV.pdf"
+       class="btn secondary"
+       target="_blank"
+       rel="noopener noreferrer">
+       👁 View My CV Online
+    </a>
+
+</div>
+
+<p style="font-size:13px">
+    My CV is available as a downloadable PDF document.
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+
+<section id="contact" class="section">
+<div class="container">
+
+<h2 class="section-title">Contact Me</h2>
+
+<p class="section-description">
+Feel free to reach out for collaboration,
+academic projects, or professional opportunities.
+</p>
+
+<div class="contact-grid">
+
+<div class="card contact-info">
+
+<h3>Let's Connect!</h3>
+
+<p>
+    <strong>Email:</strong><br>
+    <a href="mailto:jescillpedro@gmail.com">
+        jescillpedro@gmail.com
+    </a>
+</p>
+
+<p>
+    <strong>Phone:</strong><br>
+    <a href="tel:+639168961285">0916 896 1285</a>
+</p>
+
+<p>
+    <strong>Location:</strong><br>
+    Calamba City, Laguna, Philippines
+</p>
+
+<p>
+    <strong>LinkedIn:</strong><br>
+    <a href="https://ph.linkedin.com/in/jescill-pedro-774349447"
+       target="_blank"
+       rel="noopener noreferrer">
+       View My LinkedIn Profile
+    </a>
+</p>
+
+<p>
+    <strong>GitHub:</strong><br>
+    <a href="https://github.com/jescillpedro-bot"
+       target="_blank"
+       rel="noopener noreferrer">
+       View My GitHub Profile
+    </a>
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Send a Message</h3>
+
+<p>
+    Complete the form below to prepare an email
+    using your email application.
+</p>
+
+<form id="contactForm" class="contact-form">
+
+    <div class="honeypot" aria-hidden="true">
+        <label for="website">Leave this field empty</label>
+        <input type="text" id="website" name="website"
+               tabindex="-1" autocomplete="off">
+    </div>
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name"
+           maxlength="100" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email"
+           maxlength="150" required>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject"
+           maxlength="150" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message"
+              maxlength="3000" required></textarea>
+
+    <button type="submit" class="btn">
+        Send Message
+    </button>
+
+    <p id="formStatus" role="status" aria-live="polite"></p>
+
+</form>
+
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+
+<footer>
+
+<h3>Jescill Olieta Pedro</h3>
+
+<p>Aspiring IT Professional | BSIT Student</p>
+
+<p>Calamba City, Laguna, Philippines</p>
+
+<div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div>
+    <a href="mailto:jescillpedro@gmail.com">Email</a>
+
+    <a href="https://ph.linkedin.com/in/jescill-pedro-774349447"
+       target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+    <a href="https://github.com/jescillpedro-bot"
+       target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+
+<p style="margin-top:25px">
+    &copy; <span id="currentYear"></span>
+    Jescill Pedro. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+/* ========== PROJECT DATABASE ========== */
+
+const projects = [
+
+{
+    id: "personal-portfolio",
+    name: "Personal Portfolio Website",
+    category: "Web Development",
+    type: "Website",
+    year: "2026",
+    status: "In Development",
+    role: "Front-End Web Developer",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "",
+    description: "A responsive personal portfolio website created to showcase my educational background, technical skills, experience, and digital projects.",
+    problem: "I needed a professional platform to organize and present my skills and previous work.",
+    solution: "I developed a responsive portfolio website using HTML, CSS, and JavaScript.",
+    features: [
+        "Responsive website layout",
+        "Project search and filtering",
+        "Dark and light mode",
+        "Education and experience sections",
+        "Contact form",
+        "Downloadable CV"
+    ],
+    liveUrl: "https://pedro-portfolio3-it11.netlify.app/",
+    githubUrl: ""
+},
+
+{
+    id: "request-management-system",
+    name: "Request Management System",
+    category: "Information System",
+    type: "Academic Programming Project",
+    year: "unspecified",
+    status: "Academic Project",
+    role: "Student Programmer",
+    technologies: ["C++"],
+    image: "",
+    description: "An academic request management system developed using C++ to organize requests and manage information.",
+    problem: "The project explored how requests and related information could be organized through a computer program.",
+    solution: "I applied C++ programming logic and data structures to develop a request management system.",
+    features: [
+        "Request organization",
+        "Information management",
+        "Programming logic",
+        "Data structure application"
+    ],
+    liveUrl: "",
+    githubUrl: ""
+},
+
+{
+    id: "flowers-digital",
+    name: "Flower's Digital",
+    category: "Graphic Design",
+    type: "Logo Design",
+    year: "unspecified",
+    status: "Completed",
+    role: "Digital Designer",
+    technologies: ["Digital Design", "Visual Branding"],
+    image: "https://i.postimg.cc/3RZYtWK3/Messenger-creation-6211CB7E-1E0C-4ED7-BE1B-C3DBD1AA83C1.jpg",
+    description: "A personal flower-inspired digital logo designed to represent creativity, courage, passion, and personal identity.",
+    problem: "I wanted to create a recognizable personal design that represents my identity.",
+    solution: "I designed a red flower with five large petals, a smaller central flower, yellow decorative dots, and a hand-like element.",
+    features: [
+        "Red flower symbol",
+        "Five large petals",
+        "Smaller central flower",
+        "Yellow decorative details",
+        "Personal identity concept"
+    ],
+    liveUrl: "",
+    githubUrl: ""
+},
+
+{
+    id: "brew-haven-coffee",
+    name: "Brew Haven Coffee",
+    category: "Graphic Design",
+    type: "Logo Design",
+    year: "2026",
+    status: "Completed",
+    role: "Digital Designer",
+    technologies: ["Logo Design", "Visual Branding"],
+    image: "https://i.postimg.cc/BZxKGCnN/IMG-20261020-035717.jpg",
+    description: "A coffee shop logo concept inspired by warmth, comfort, relaxation, and a welcoming atmosphere.",
+    problem: "The design needed to communicate the idea of a peaceful and comfortable coffee shop.",
+    solution: "I used a coffee cup symbol and warm orange colors to communicate relaxation and positivity.",
+    features: [
+        "Coffee cup symbol",
+        "Warm color palette",
+        "Welcoming visual identity",
+        "Coffee shop branding concept"
+    ],
+    liveUrl: "",
+    githubUrl: ""
+},
+
+{
+    id: "logo-coffee",
+    name: "Logo Coffee",
+    category: "Graphic Design",
+    type: "Logo Design",
+    year: "2026",
+    status: "Completed",
+    role: "Digital Designer",
+    technologies: ["Logo Design", "Creative Design"],
+    image: "https://i.postimg.cc/8P9rVnVF/Screenshot-2026-10-22-10-35-22-01.jpg",
+    description: "A coffee-inspired logo designed to communicate a warm, friendly, and relaxing coffee shop atmosphere.",
+    problem: "I wanted to create a visual identity that reflects the comfort and enjoyment associated with coffee.",
+    solution: "I incorporated coffee-related elements, including beans and steam, to represent freshness and relaxation.",
+    features: [
+        "Coffee shop concept",
+        "Coffee bean elements",
+        "Steam details",
+        "Warm and welcoming appearance"
+    ],
+    liveUrl: "",
+    githubUrl: ""
+}
+
+];
+
+/* ========== HELPERS ========== */
+
+function createElement(tag, className, content) {
+    const element = document.createElement(tag);
+
+    if (className) {
+        element.className = className;
+    }
+
+    if (content !== undefined) {
+        element.textContent = content;
+    }
+
+    return element;
+}
+
+function createProjectImage(project, className) {
+    if (project.image) {
+        const img = document.createElement("img");
+
+        img.src = project.image;
+        img.alt = project.name + " project image";
+        img.className = className;
+        img.loading = "lazy";
+
+        return img;
+    }
+
+    const placeholder = createElement(
+        "div", className, "💻 " + project.category
+    );
+
+    placeholder.style.display = "flex";
+    placeholder.style.alignItems = "center";
+    placeholder.style.justifyContent = "center";
+    placeholder.style.textAlign = "center";
+    placeholder.style.padding = "20px";
+    placeholder.style.color = "var(--primary)";
+
+    return placeholder;
+}
+
+function createExternalLink(url, label) {
+    const link = createElement("a", "btn small secondary", label);
+
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    return link;
+}
+
+/* ========== PROJECT SEARCH ========== */
+
+const projectGrid = document.getElementById("projectGrid");
+const projectSearch = document.getElementById("projectSearch");
+const categoryFilter = document.getElementById("categoryFilter");
+const yearFilter = document.getElementById("yearFilter");
+const projectCount = document.getElementById("projectCount");
+const noResults = document.getElementById("noResults");
+
+function renderProjects() {
+    const search = projectSearch.value.toLowerCase().trim();
+    const category = categoryFilter.value;
+    const year = yearFilter.value;
+
+    const filtered = projects.filter(project => {
+        const searchable = [
+            project.name,
+            project.category,
+            project.type,
+            project.year,
+            project.role,
+            project.description,
+            ...project.technologies
+        ].join(" ").toLowerCase();
+
+        return searchable.includes(search)
+            && (category === "all" || project.category === category)
+            && (year === "all" || project.year === year);
+    });
+
+    projectGrid.replaceChildren();
+
+    projectCount.textContent =
+        "Showing " + filtered.length + " of " + projects.length + " projects";
+
+    noResults.hidden = filtered.length !== 0;
+
+    filtered.forEach(project => {
+        const card = createElement("article", "project-card");
+
+        card.appendChild(createProjectImage(project, "project-image"));
+
+        const body = createElement("div", "project-body");
+
+        body.appendChild(createElement("h3", "", project.name));
+        body.appendChild(createElement("p", "", project.description));
+
+        body.appendChild(createElement(
+            "div",
+            "project-meta",
+            project.category + " | " + project.year + " | " + project.status
+        ));
+
+        const tags = createElement("div");
+
+        project.technologies.forEach(technology => {
+            tags.appendChild(createElement(
+                "span", "project-tag", technology
+            ));
+        });
+
+        body.appendChild(tags);
+
+        const buttons = createElement("div", "project-buttons");
+
+        const detailLink = createElement(
+            "a", "btn small", "View Details"
+        );
+
+        detailLink.href = "#projects/" + project.id;
+        buttons.appendChild(detailLink);
+
+        if (project.liveUrl) {
+            buttons.appendChild(
+                createExternalLink(project.liveUrl, "Live Project")
+            );
+        }
+
+        if (project.githubUrl) {
+            buttons.appendChild(
+                createExternalLink(project.githubUrl, "Source Code")
+            );
+        }
+
+        body.appendChild(buttons);
+        card.appendChild(body);
+        projectGrid.appendChild(card);
+    });
+}
+
+projectSearch.addEventListener("input", renderProjects);
+categoryFilter.addEventListener("change", renderProjects);
+yearFilter.addEventListener("change", renderProjects);
+
+/* ========== PROJECT DETAIL PAGES ========== */
+
+const detailSection = document.getElementById("projectDetail");
+const detailContent = document.getElementById("detailContent");
+
+const mainSections = document.querySelectorAll(
+    "main > section:not(#projectDetail)"
+);
+
+function addDetail(parent, heading, content) {
+    parent.appendChild(createElement("h3", "", heading));
+    parent.appendChild(createElement("p", "", content));
+}
+
+function showProjectDetail(project) {
+    mainSections.forEach(section => {
+        section.style.display = "none";
+    });
+
+    detailSection.style.display = "block";
+    detailContent.replaceChildren();
+
+    detailContent.appendChild(
+        createElement("h1", "section-title", project.name)
+    );
+
+    detailContent.appendChild(
+        createElement(
+            "p",
+            "section-description",
+            project.category + " | " + project.year + " | " + project.status
+        )
+    );
+
+    detailContent.appendChild(
+        createProjectImage(project, "detail-image")
+    );
+
+    const grid = createElement("div", "detail-grid");
+    const overview = createElement("div", "card");
+
+    addDetail(overview, "Project Overview", project.description);
+    addDetail(overview, "Problem", project.problem);
+    addDetail(overview, "Solution", project.solution);
+
+    overview.appendChild(
+        createElement("h3", "", "Project Features")
+    );
+
+    const featureList = createElement("ul");
+
+    project.features.forEach(feature => {
+        featureList.appendChild(
+            createElement("li", "", feature)
+        );
+    });
+
+    overview.appendChild(featureList);
+
+    const info = createElement("div", "card");
+
+    addDetail(info, "Creator's Role", project.role);
+    addDetail(info, "Project Category", project.category);
+    addDetail(info, "Project Type", project.type);
+    addDetail(info, "Project Year", project.year);
+    addDetail(info, "Project Status", project.status);
+    addDetail(info, "Technologies Used", project.technologies.join(", "));
+
+    if (project.liveUrl) {
+        info.appendChild(
+            createExternalLink(project.liveUrl, "Live Project")
+        );
+    }
+
+    if (project.githubUrl) {
+        info.appendChild(
+            createExternalLink(project.githubUrl, "GitHub Source")
+        );
+    }
+
+    grid.appendChild(overview);
+    grid.appendChild(info);
+    detailContent.appendChild(grid);
+
+    document.title = project.name + " | Jescill Pedro";
+
+    window.scrollTo(0, 0);
+}
+
+/* ========== NAVIGATION ROUTING ========== */
+
+function handleRoute() {
+    const hash = decodeURIComponent(
+        window.location.hash.slice(1)
+    );
+
+    if (hash.startsWith("projects/")) {
+        const id = hash.substring("projects/".length);
+        const project = projects.find(item => item.id === id);
+
+        if (project) {
+            showProjectDetail(project);
+            return;
+        }
+
+        window.location.hash = "#projects";
+        return;
+    }
+
+    detailSection.style.display = "none";
+
+    mainSections.forEach(section => {
+        section.style.display = "";
+    });
+
+    document.title = "Jescill Pedro | IT Professional Portfolio";
+
+    if (hash) {
+        const target = document.getElementById(hash);
+
+        if (target) {
+            requestAnimationFrame(() => {
+                target.scrollIntoView();
+            });
+        }
+    }
+}
+
+window.addEventListener("hashchange", handleRoute);
+
+/* ========== DARK MODE ========== */
+
+const themeToggle = document.getElementById("themeToggle");
+
+function applyTheme(theme) {
+    document.body.classList.toggle("dark", theme === "dark");
+
+    themeToggle.textContent = theme === "dark" ? "☀️" : "🌙";
+
+    themeToggle.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    );
+}
+
+let savedTheme = "light";
+
+try {
+    savedTheme = localStorage.getItem("portfolioTheme") || "light";
+} catch (error) {
+    savedTheme = "light";
+}
+
+applyTheme(savedTheme);
+
+themeToggle.addEventListener("click", () => {
+    const newTheme = document.body.classList.contains("dark")
+        ? "light" : "dark";
+
+    applyTheme(newTheme);
+
+    try {
+        localStorage.setItem("portfolioTheme", newTheme);
+    } catch (error) {
+        // Dark mode still works without local storage.
+    }
+});
+
+/* ========== MOBILE MENU ========== */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* ========== CONTACT FORM ========== */
+
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+
+contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (document.getElementById("website").value.trim() !== "") {
+        return;
+    }
+
+    if (!contactForm.reportValidity()) {
+        return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !subject || !message) {
+        formStatus.textContent = "Please complete all required fields.";
+        return;
+    }
+
+    const emailBody =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n\n" +
+        "Message:\n" + message;
+
+    const mailto =
+        "mailto:jescillpedro@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(emailBody);
+
+    formStatus.textContent =
+        "Your email application will open. Please send the prepared message.";
+
+    window.location.href = mailto;
+});
+
+/* ========== FOOTER YEAR ========== */
+
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+/* ========== INITIALIZE ========== */
+
+renderProjects();
+handleRoute();
+
+</script>
+
+</body>
+</html>
